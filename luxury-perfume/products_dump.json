@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Elava Gentle Hydrating Cleanser",
+        "skin_concern": null,
+        "description": "A gentle, foaming cleanser that removes impurities without stripping moisture."
+    },
+    {
+        "id": 2,
+        "name": "Vitamin C Glow Serum",
+        "skin_concern": null,
+        "description": "A powerful antioxidant serum designed to brighten and even out skin tone."
+    },
+    {
+        "id": 3,
+        "name": "Lightweight Cloud Moisturizer",
+        "skin_concern": null,
+        "description": "A lightweight daily moisturizer featuring hyaluronic acid for deep, lasting hydration."
+    },
+    {
+        "id": 4,
+        "name": "Purifying Clay Cleanser",
+        "skin_concern": null,
+        "description": "A deep-cleaning clay formula that visibly minimizes pores."
+    },
+    {
+        "id": 5,
+        "name": "Night Repair Serum",
+        "skin_concern": null,
+        "description": "Advanced night repair serum to rebuild your skin's barrier while you sleep."
+    },
+    {
+        "id": 6,
+        "name": "Rich Recovery Cream",
+        "skin_concern": null,
+        "description": "Intense moisture cream for dry, compromised skin barriers."
+    },
+    {
+        "id": 8,
+        "name": "Hyaluronic Acid Booster",
+        "skin_concern": null,
+        "description": "Pure plumping booster that draws moisture deep into the skin."
+    },
+    {
+        "id": 10,
+        "name": "Rosewater Soothing Mist Serum",
+        "skin_concern": null,
+        "description": "A misty spritz serum layered with rosewater and collagen for an instant glow."
+    },
+    {
+        "id": 11,
+        "name": "retonoil",
+        "skin_concern": null,
+        "description": "can make fade wrinkles and make skin anti aging and make skin glow and smooth"
+    }
+]

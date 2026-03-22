@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+class admincontroller extends Controller
+
+{
+    public function register(Request $request)
+    {
+
+    
+    $fields = $request->validate([
+        'name' => 'required|max:255',
+        'email' => 'required|email|unique:users',
+        'password'=> 'required|confirmed'
+
+    ]);
+    $user = User::create($fields);
+    $token = $user->createToken($request->name);
+
+    return [
+        'user'=>$user,
+        'token'=>$token
+    ];
+
+        
+    }
+
+
+public function login(Request $request)
+{
+      $request->validate([
+        
+        'email' => 'required|email|exists:users',
+        'password'=> 'required'
+
+    ]);
+    $user = User::where('email', $request->email)->first();
+   if (!$user || !Hash::check($request->password,$user->password)){
+    return['messeage'=>'the provided credentials are incorrect.'];
+
+    }
+    $token = $user->createToken($user->name);
+    return[
+        "user"=>$user,
+        "token"=>$token->plainTextToken
+    ];
+
+        
+    }
+    public function logout(Request $request)
+{
+        if ($request->user()) {
+            $request->user()->tokens()->delete();
+        }
+        return [
+            'messeage'=> 'you are logged out.'
+        ];
+    }
+}
+  
